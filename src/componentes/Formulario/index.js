@@ -1,9 +1,11 @@
+import Botao from '../Botao'
 import CampoTexto from '../CampopTexto'
 import ListaSuspensa from '../ListaSuspensa'
 import './Formulario.css'
 
 const Formulario = (props) => {
 
+    //Para ListaSuspensa
     const times = [
         'Programação',
         'Front-End',
@@ -23,6 +25,7 @@ const Formulario = (props) => {
                 <CampoTexto label="Cargo" placeholder="Digite seu cargo" />
                 <CampoTexto label="Imagem" placeholder="Digite o endereço da imagem" />
                 <ListaSuspensa label='Times' itens={times} />
+                <Botao>Criar Card</Botao>
             </form>
         </section>
 

@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './CampoTexto.css'
 
 const CampoTexto = (props) => {
@@ -5,11 +6,15 @@ const CampoTexto = (props) => {
     const placeholderModificado = `${props.placeholder}...`
 
     //guardando o input
-    let valor = 'fdfg'
+    //let valor = 'fdfg'
+
+
+    //array com duas variaveis, definimos `valor` como 'vazio' e `setValor` como uma função para atualizar o estado.           useState= hook, variavel de estado
+    const [valor, setValor] = useState('Matheus')
 
     //capturando input
     const aoDigitado = (evento) => {
-        valor = evento.target.value
+        setValor(evento.target.value)
         console.log(valor)
     }
 

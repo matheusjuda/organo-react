@@ -17,21 +17,19 @@ const Formulario = (props) => {
         'Inovação e Gestão'
     ]
 
-
     //array com duas variaveis, definimos `nome` como 'vazio' e `setValor` como uma função para atualizar o estado. / useState= hook, variavel de estado
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
+    const [time, setTime] = useState('')
 
 
     //Estado formulario
     const aoSalvar = (evento) => {
         evento.preventDefault() //previnindo o comportamento padrão de recarregar a pag
-        console.log('SALVE', nome, cargo, imagem)
-
+        console.log(nome, cargo, imagem, time)
 
     }
-
 
     return (
         <section className='formulario'>
@@ -61,6 +59,8 @@ const Formulario = (props) => {
                     obrigatorio={true}
                     label='Times'
                     itens={times}
+                    valor={time}
+                    listaAlterada={valor => setTime(valor)}
                 />
                 <Botao>Criar Card</Botao>
             </form>

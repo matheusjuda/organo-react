@@ -58,7 +58,8 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Formulario colaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)} />
+      <Formulario times={times.map(time => time.nome)}
+        colaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)} />
       {/*Para cada time da lista de times cria-se um componente chamado Time com esse nome*/}
       {times.map(time => <Time
         key={time.nome}

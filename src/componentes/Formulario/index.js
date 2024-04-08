@@ -27,7 +27,12 @@ const Formulario = (props) => {
     //Estado formulario
     const aoSalvar = (evento) => {
         evento.preventDefault() //previnindo o comportamento padrão de recarregar a pag
-        console.log(nome, cargo, imagem, time)
+        props.colaboradorCadastrado({ //Passando objeto para App
+            nome: nome,
+            cargo: cargo,
+            imagem: imagem,
+            time: time
+        })
 
     }
 

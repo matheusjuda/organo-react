@@ -60,7 +60,13 @@ function App() {
       <Banner />
       <Formulario colaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)} />
       {/*Para cada time da lista de times cria-se um componente chamado Time com esse nome*/}
-      {times.map(time => <Time key={time.nome} nome={time.nome} />)}
+      {times.map(time => <Time
+        key={time.nome}
+        nome={time.nome}
+        corBorda={time.corPrimaria}
+        corFundo={time.corSecundaria}
+
+      />)}
 
 
     </div>

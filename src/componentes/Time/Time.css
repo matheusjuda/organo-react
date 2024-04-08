@@ -1,7 +1,7 @@
 .time {
     text-align: center;
     padding: 32px;
-    background-color: rgb(191, 237, 237);
+    
 }
 
 .time h3 {
@@ -9,6 +9,6 @@
     border-bottom: 4px solid;
     display: inline-block;
     padding-bottom: 8px;
-    border-bottom: 4px solid #57c278;
+    
 }
 

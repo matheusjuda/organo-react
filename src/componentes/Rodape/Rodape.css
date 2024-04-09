@@ -1,0 +1,31 @@
+.footer {
+    background: #6278F7;
+    color: #FFF;
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer ul li {
+    display: inline-block;
+    margin-right: 32px;
+}
+
+.footer ul li:last-child {
+    margin-right: 0;
+}
+
+.links a img {
+    width: calc(2vw + 0.3rem);
+    height: calc(2vw + 0.3rem);
+  
+    margin: calc(0.8vw + 0.8rem);
+    filter: brightness(.9);
+    transition: all .3s ease;
+}
+
+.links a img:hover {
+  transform: scale(1.15);
+  filter: brightness(1);
+}

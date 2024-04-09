@@ -8,6 +8,7 @@ const ListaSuspensa = (props) => {
                 onChange={evento => props.listaAlterada(evento.target.value)} //capturando alteração de lista
                 required={props.required}> {/*obrigatorio para validar formulario */}
                 value={props.valor}
+                <option value={''}></option>
                 {props.itens.map(item => <option key={item}>{item}</option>)} {/* Para cada item retorne uma option */}
             </select>
         </div>

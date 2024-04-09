@@ -12,6 +12,8 @@ const Time = (props) => {
             <div className='colaboradores'>
                 {/*Trazendo input para Colaborador*/}
                 {props.colaboradores.map(colaborador => <Colaborador
+                    corColaborador={props.corBorda}
+                    key={colaborador.nome}
                     nome={colaborador.nome}
                     cargo={colaborador.cargo}
                     imagem={colaborador.imagem}

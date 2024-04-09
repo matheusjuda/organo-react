@@ -51,7 +51,7 @@ function App() {
 
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
-    console.log(colaborador)
+    //console.log(colaborador)
     setColaboradores([...colaboradores, colaborador]) //espalhando colaboradores antigos e colocando os novos
   }
 
@@ -66,7 +66,7 @@ function App() {
         nome={time.nome}
         corBorda={time.corPrimaria}
         corFundo={time.corSecundaria}
-
+        colaboradores={colaboradores}
       />)}
 
 

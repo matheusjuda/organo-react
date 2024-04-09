@@ -66,7 +66,8 @@ function App() {
         nome={time.nome}
         corBorda={time.corPrimaria}
         corFundo={time.corSecundaria}
-        colaboradores={colaboradores}
+        // Filtrando array colaboradores 
+        colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
       />)}
 
 

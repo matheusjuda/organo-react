@@ -56,6 +56,10 @@ function App() {
     setColaboradores([...colaboradores, colaborador]) //espalhando colaboradores antigos e colocando os novos
   }
 
+  function deletandoColaborador() {
+    console.log('DELETEEEE')
+  }
+
   return (
     <div className="App">
       <Banner />
@@ -69,6 +73,7 @@ function App() {
         corFundo={time.corSecundaria}
         // Filtrando array colaboradores 
         colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+        aoDeletar={deletandoColaborador}
       />)}
       <Rodape />
 

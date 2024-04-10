@@ -11,13 +11,16 @@ const Time = (props) => {
             <h3 style={corBorda}>{props.nome}</h3>
             <div className='colaboradores'>
                 {/*Trazendo input para Colaborador*/}
-                {props.colaboradores.map(colaborador => <Colaborador
-                    corColaborador={props.corBorda}
-                    key={colaborador.nome}
-                    nome={colaborador.nome}
-                    cargo={colaborador.cargo}
-                    imagem={colaborador.imagem}
-                />)}
+                {props.colaboradores.map(colaborador =>
+                    <Colaborador
+                        corColaborador={props.corBorda}
+                        key={colaborador.nome}
+                        nome={colaborador.nome}
+                        cargo={colaborador.cargo}
+                        imagem={colaborador.imagem}
+                        aoDeletar={props.aoDeletar}
+                    />
+                )}
             </div>
 
         </section>

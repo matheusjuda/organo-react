@@ -55,9 +55,10 @@ function App() {
     //console.log(colaborador)
     setColaboradores([...colaboradores, colaborador]) //espalhando colaboradores antigos e colocando os novos
   }
-
-  function deletandoColaborador() {
-    console.log('DELETEEEE')
+  //Função sendo chamada componente Colaborador
+  function deletandoColaborador(id) {
+    //console.log('DELETEEEE', id)
+    setColaboradores(colaboradores.filter(colaborador => colaborador.id !== id))
   }
 
   return (
@@ -66,15 +67,16 @@ function App() {
       <Formulario times={times.map(time => time.nome)}
         colaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)} />
       {/*Para cada time da lista de times cria-se um componente chamado Time com esse nome*/}
-      {times.map(time => <Time
-        key={time.nome}
-        nome={time.nome}
-        corBorda={time.corPrimaria}
-        corFundo={time.corSecundaria}
-        // Filtrando array colaboradores 
-        colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
-        aoDeletar={deletandoColaborador}
-      />)}
+      {times.map(time =>
+        <Time
+          key={time.nome}
+          nome={time.nome}
+          corBorda={time.corPrimaria}
+          corFundo={time.corSecundaria}
+          // Filtrando array colaboradores 
+          colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+          aoDeletar={deletandoColaborador}
+        />)}
       <Rodape />
 
 

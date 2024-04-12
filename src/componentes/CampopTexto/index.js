@@ -15,7 +15,10 @@ const CampoTexto = (props) => {
         <div className='campo-texto'>
             <label>{props.label}</label>
             {/*required= obrigatorio para validar formulario / onChange= evento ocorre quando o valor de um elemento HTML é alterado*/}
-            <input value={props.valor} onChange={aoDigitado} required={props.obrigatorio} placeholder={placeholderModificado} />
+            <input value={props.valor}
+                onChange={aoDigitado}
+                required={props.obrigatorio}
+                placeholder={placeholderModificado} />
         </div>
     )
 }

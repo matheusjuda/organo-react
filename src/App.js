@@ -66,17 +66,22 @@ function App() {
       <Banner />
       <Formulario times={times.map(time => time.nome)}
         colaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)} />
-      {/*Para cada time da lista de times cria-se um componente chamado Time com esse nome*/}
-      {times.map(time =>
-        <Time
-          key={time.nome}
-          nome={time.nome}
-          corBorda={time.corPrimaria}
-          corFundo={time.corSecundaria}
-          // Filtrando array colaboradores 
-          colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
-          aoDeletar={deletandoColaborador}
-        />)}
+      <section className="times">
+        <h1>Minha organização</h1>
+        {/*Para cada time da lista de times cria-se um componente chamado Time com esse nome*/}
+        {times.map(time =>
+          <Time
+            key={time.nome}
+            nome={time.nome}
+            corBorda={time.corPrimaria}
+            corFundo={time.corSecundaria}
+            // Filtrando array colaboradores 
+            colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+            aoDeletar={deletandoColaborador}
+          />)}
+
+      </section>
+
       <Rodape />
 
 
